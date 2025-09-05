@@ -36,3 +36,18 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+function openPopup(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closePopup(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+document.getElementById("close-all-btn").addEventListener("click", () => {
+  ["publications-popup", "projects-popup", "teaching-popup", "funfact-popup"].forEach(id => {
+    closePopup(id);
+  });
+});
+
