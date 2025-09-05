@@ -1,0 +1,85 @@
+body {
+  background: linear-gradient(135deg, #fef6f9, #e3f2fd, #f0fff4);
+  font-family: 'Courier New', monospace;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.desktop-icon {
+  position: absolute;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  color: #444;
+}
+
+.desktop-icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+}
+
+.desktop-icon span {
+  font-size: 0.8em;
+}
+
+.popup-window {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 90%;
+  max-width: 320px;
+  background-color: #fff;
+  border: 3px ridge #ffb6c1;
+  box-shadow: 6px 6px 0 #d1c4e9;
+  z-index: 1000;
+  display: none;
+}
+
+.popup-header {
+  background-color: #b2ebf2;
+  color: #333;
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #ff69b4;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.popup-content {
+  padding: 12px;
+  font-size: 0.95em;
+  background-color: #f0fff4;
+}
+
+@media (max-width: 600px) {
+  .desktop-icon {
+    position: static;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
+
+  .popup-window {
+    top: 20px;
+    left: 10px;
+    font-size: 0.85em;
+  }
+
+  .popup-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
